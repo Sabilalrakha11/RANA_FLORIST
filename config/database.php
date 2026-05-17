@@ -4,7 +4,7 @@ date_default_timezone_set('Asia/Jakarta');
 
 $servername = "rana_db";
 $username = "root";
-$password = "Rahasia123";
+$password = "rootpassword";
 $dbname = "db_rana_florist";
 
 $conn = mysqli_connect($servername, $username, $password, $dbname);
