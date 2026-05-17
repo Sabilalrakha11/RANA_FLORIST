@@ -2,10 +2,10 @@
 // ATUR ZONA WAKTU KE INDONESIA (WIB)
 date_default_timezone_set('Asia/Jakarta');
 
-$servername = "localhost";
+$servername = "rana_db";
 $username = "root";
 $password = "";
-$dbname = "db_ranaflorist";
+$dbname = "db_rana_florist";
 
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 
