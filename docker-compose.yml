@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  rana_app:
+    build: .
+    container_name: rana_florist_app
+    ports:
+      - "8090:80" # <-- Ini port 8090 khusus buat kamu cuy!
+    volumes:
+      - .:/var/www/html
+    depends_on:
+      - rana_db
+
+  rana_db:
+    image: mysql:8.0
+    container_name: rana_florist_db
+    environment:
+      MYSQL_DATABASE: db_rana_florist
+      MYSQL_ROOT_PASSWORD: rootpassword
+    volumes:
+      - rana_db_data:/var/lib/mysql
+
+volumes:
+  rana_db_data:
